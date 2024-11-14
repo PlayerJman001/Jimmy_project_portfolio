@@ -20,7 +20,7 @@ body
 .square
     {
         height: 150px;
-        width: 120%; /*bruh why isn't 100% the full width (._.)*/
+        width: 120%; 
         background-color: black;
         position: fixed;
         top: 0vh;
@@ -39,7 +39,7 @@ header
         transform: skew(0deg, -2deg);
     }
 
-    .textbg 
+.textbg 
     {
         z-index: 1;
         border-bottom: 110px solid white;
@@ -62,21 +62,6 @@ header
         right: 50px;
     }
 
-.btn 
-    {
-        transition: transform .7 ease-in-out;
-        cursor: pointer;
-        position: fixed;
-        top: 30px;
-        left: 40px;
-        background-color: transparent;
-        border-style: none;
-    }
-
-.btn:hover
-    {
-        transform: rotate(-5deg);
-    }
 
 .txt
     {
@@ -89,3 +74,81 @@ header
         left: -250px;
         top: 50px;
     }
+
+    /* The side navigation menu */
+.sidenav 
+    {
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 2; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      background-color: black; /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+.sidenav a 
+    {
+        font-family: expose;
+
+    
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+.sidenav a:hover 
+    {
+      color: #f1f1f1;
+    }
+    
+    /* Position and style the close button (top right corner) */
+.sidenav .closebtn 
+    {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main 
+    {
+      transition: margin-left .5s;
+      padding: 20px;
+    }
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) 
+    {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+.btn
+   {
+    z-index: 1;
+    position: fixed;
+    top: 35px;
+    left: 40px;
+   }
+#home
+   {
+    transform: skew(0deg, -7deg);
+   }
+#port
+   {
+    transform: skew(2deg, 1deg);
+   }
+#contact
+   {
+    transform: skew(0deg, 7deg);
+   }
