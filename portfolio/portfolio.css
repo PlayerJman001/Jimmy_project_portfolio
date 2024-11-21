@@ -10,7 +10,7 @@ body
         align-items: center;
         height: 100vh;
         justify-content: center;
-        background-image: url(../img/background.png);
+        background-image: url(../img/smthsmth.png);
         object-fit: cover;
         background-position: 50% 50%;
     }
@@ -46,7 +46,7 @@ header
         border-left: 25px solid transparent;
         border-right: 30px solid transparent;
         height: 0;
-        width: 650px;
+        width: 485px;
         position: fixed;
         top: 15px;
         left: 170px;
@@ -74,7 +74,8 @@ header
         left: -250px;
         top: 50px;
     }
-
+    
+    
     /* The side navigation menu */
 .sidenav 
     {
