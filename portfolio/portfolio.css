@@ -163,3 +163,36 @@ header
    {
     transform: skew(0deg, 7deg);
    }
+
+.card  
+   {
+        border: 2px solid black;
+        border-radius: 20px;
+        background-color: white;
+        padding-left: 290px;
+        padding-top: 350px;
+   }
+#card1
+   {
+        z-index: -4;
+        position: relative;
+        left: -300px;
+        top: 800px;
+        rotate: -20deg;
+   }
+#card2
+   {
+        z-index: -3;
+        position: relative;
+        left: -150px;
+        top: 400px;
+        rotate: -10deg;
+   }
+#card3
+    {
+        z-index: -2;
+        position: relative;
+        left: -50px;
+        top: 70px;
+        rotate: 0deg;
+    }
