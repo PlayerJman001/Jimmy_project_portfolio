@@ -5,6 +5,7 @@
 
 body 
     {
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -13,6 +14,7 @@ body
         background-image: url(../img/background.png);
         object-fit: cover;
         background-position: 50% 50%;
+        background-attachment: fixed;
     }
 
 

@@ -19,3 +19,8 @@ function contactOpen()
     {
       window.location.href = "../contacts/contacts.html";
     }
+
+  function test()
+    {
+      alert("Works")
+    }
