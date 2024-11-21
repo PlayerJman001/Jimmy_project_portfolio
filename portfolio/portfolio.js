@@ -20,7 +20,7 @@ function contactOpen()
       window.location.href = "../contacts/contacts.html";
     }
 
-  function test()
+function test()
     {
       alert("Works")
     }
