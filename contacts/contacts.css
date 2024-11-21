@@ -1,0 +1,175 @@
+@font-face {
+    font-family: expose;
+    src: url(../img/Expose-Regular.ttf);
+}
+
+body 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        background-image: url(../img/smthsmth.png);
+        object-fit: cover;
+        background-position: 50% 50%;
+    }
+
+
+
+.square
+    {
+        height: 150px;
+        width: 120%; 
+        background-color: black;
+        position: fixed;
+        top: 0vh;
+        z-index: 0;
+    }
+
+header 
+    {
+        z-index: 2;
+        font-family: expose; 
+        font-size: 110px;
+        position: fixed;
+        top: 0;
+        left: 220px;
+        
+        transform: skew(0deg, -2deg);
+    }
+
+.textbg 
+    {
+        z-index: 1;
+        border-bottom: 110px solid white;
+        border-left: 25px solid transparent;
+        border-right: 30px solid transparent;
+        height: 0;
+        width: 480px;
+        position: fixed;
+        top: 15px;
+        left: 170px;
+
+        transform: skew(0deg, -2deg);
+    }
+
+.icon
+    {
+        z-index: 4;
+        position: fixed;
+        top: 20px;
+        right: 50px;
+    }
+
+    /* The side navigation menu */
+.txt
+    {
+        font-size: 30px;
+        background-color: white;
+        border: 2px solid black;
+        padding: 20px;
+        transform: skew(0deg,-7deg);
+        position: relative;
+        left: 200px;
+        top: -150px;
+    }
+
+.photobg
+    {
+        background-color: white;
+        border: 2px solid black;;
+        padding-top: 450px;
+        padding-left: 350px;
+        position: relative;
+        top: 200px;
+        left: -300px;
+        rotate: 17deg;
+    }
+
+.sidenav 
+    {
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 2; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      background-color: black; /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+.sidenav a 
+    {
+        font-family: expose;
+
+    
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+.sidenav a:hover 
+    {
+      color: #f1f1f1;
+    }
+    
+    /* Position and style the close button (top right corner) */
+.sidenav .closebtn 
+    {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main 
+    {
+      transition: margin-left .5s;
+      padding: 20px;
+    }
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) 
+    {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+.btn
+   {
+    z-index: 1;
+    position: fixed;
+    transition: ease .2s;
+    top: 35px;
+    left: 40px;
+   }
+
+.btn:hover
+   {
+        transform: rotate(2deg) scale(1.1);
+   }
+
+#home
+   {
+    transform: skew(0deg, -7deg);
+   }
+
+#port
+   {
+    transform: skew(2deg, 1deg);
+   }
+
+#contact
+   {
+    transform: skew(0deg, 7deg);
+   }

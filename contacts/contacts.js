@@ -7,11 +7,12 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+function homeOpen()
+  {
+    window.location.href = "../home/frontpage.html";
+  }
+
 function portfolioOpen()
   {
     window.location.href = "../portfolio/portfolio.html";
-  }
-function contactOpen()
-  {
-    window.location.href = "../contacts/contacts.html";
   }
