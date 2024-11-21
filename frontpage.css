@@ -69,7 +69,7 @@ header
         background-color: white;
         border: 2px solid black;
         padding: 20px;
-        transform: skew(0deg, 7deg);
+        transform: skew(0deg,-7deg);
         position: relative;
         left: -250px;
         top: 50px;
@@ -133,21 +133,31 @@ header
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
     }
+
 .btn
    {
     z-index: 1;
     position: fixed;
+    transition: ease .2s;
     top: 35px;
     left: 40px;
    }
+
+.btn:hover
+   {
+        transform: rotate(2deg) scale(1.1);
+   }
+
 #home
    {
     transform: skew(0deg, -7deg);
    }
+
 #port
    {
     transform: skew(2deg, 1deg);
    }
+
 #contact
    {
     transform: skew(0deg, 7deg);
