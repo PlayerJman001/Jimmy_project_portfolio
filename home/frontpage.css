@@ -26,10 +26,11 @@ body
         background-color: black;
         position: fixed;
         top: 0vh;
+        left: 0vh;
         z-index: 0;
     }
 
-header 
+h 
     {
         z-index: 2;
         font-family: expose; 
@@ -64,8 +65,7 @@ header
         right: 50px;
     }
 
-
-.txt
+p
     {
         font-size: 30px;
         background-color: white;
@@ -77,19 +77,20 @@ header
         top: 50px;
     }
 
-    /* The side navigation menu */
 .sidenav 
     {
-      height: 100%; /* 100% Full-height */
-      width: 0; /* 0 width - change this with JavaScript */
-      position: fixed; /* Stay in place */
-      z-index: 2; /* Stay on top */
-      top: 0; /* Stay at the top */
+      height: 40%;
+      width: 0; /*This is gonna be changed in js to expand*/
+      position: fixed;
+      z-index: 2;
+      top: 0;
       left: 0;
-      background-color: black; /* Black*/
-      overflow-x: hidden; /* Disable horizontal scroll */
-      padding-top: 60px; /* Place content 60px from the top */
-      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+      background-color: black;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
+      transform: skewX(-5deg);
+      transform-origin: top;
     }
     
     /* The navigation menu links */

@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="contacts.css">
 </head>
 <body scroll="no">
-    <header>J's Contacts</Base></header>
-    <div class="textbg"></div>
-    <div class="square"></div>    
-    <div class = "photobg"></div>
-    <div class="icon">
-        <img src="../img/Icon.png" alt=""> 
-    </div>
-    <div class="txt">Email: <br> jimmytwxu@gmail.com <br> Discord <br> PlayerJman001</div>
+    <header>
+        <h>J's Contacts</h>
+        <div class="textbg"></div>
+        <div class="square"></div>    
+        <div class = "photobg"></div>
+        <div class="icon">
+            <img src="../img/Icon.png" alt=""> 
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" id="home" onclick="homeOpen()">Home</a>
+            <a href="#" id="port" onclick="portfolioOpen()">Portfolio</a>
+            <a href="#" id="contact">Contact</a>
+          </div>
+          <span onclick="openNav()" class="btn"><img src="../img/button.png"></span>
+    </header>
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#" id="home" onclick="homeOpen()">Home</a>
-        <a href="#" id="port" onclick="portfolioOpen()">Portfolio</a>
-        <a href="#" id="contact">Contact</a>
-      </div>
-      <span onclick="openNav()" class="btn"><img src="../img/button.png"></span>
+    <p>Email: <br> jimmytwxu@gmail.com <br> Discord <br> PlayerJman001</p>
       <script src="contacts.js"></script>
 </body>
 </html>

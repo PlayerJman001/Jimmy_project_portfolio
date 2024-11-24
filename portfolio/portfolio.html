@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-    <header>J's Portfolio</Base></header>
-    <div class="textbg"></div>
-    <div class="square"></div>
-    <div class="icon">
-        <img src="../img/Icon.png" alt=""> 
-    </div>
+    <header>
+        <h>J's Portfolio</h>
+        <div class="textbg"></div>
+        <div class="square"></div>
+        <img class="icon" src="../img/Icon.png" alt=""> 
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" id="home" onclick="homeOpen()">Home</a>
+            <a href="#" id="port">Portfolio</a>
+            <a href="#" id="contact" onclick="contactOpen()">Contact</a>
+        </div>
+        <span onclick="openNav()" class="btn"><img src="../img/button.png"></span>
+    </header>
     <div class="card" id="card1" onclick="test()"></div>
     <div class="card" id="card2"></div>
     <div class="card" id="card3"></div>
     <div class="card" id="card4"></div>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#" id="home" onclick="homeOpen()">Home</a>
-        <a href="#" id="port">Portfolio</a>
-        <a href="#" id="contact" onclick="contactOpen()">Contact</a>
-      </div>
-      <span onclick="openNav()" class="btn"><img src="../img/button.png"></span>
-      <script src="frontpage.js"></script>
       
       <script src="portfolio.js"></script>
 </body>
