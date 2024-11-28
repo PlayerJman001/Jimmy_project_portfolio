@@ -27,6 +27,7 @@ function card1()
 function card2()
     {
       alert ("help")
+      document.getElementById("adobe_i").style.width = "100px";
     }
 function card3()
     {
