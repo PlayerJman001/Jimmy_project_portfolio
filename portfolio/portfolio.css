@@ -5,7 +5,7 @@
 
 body 
     {
-        /*overflow-y: hidden;*/
+        overflow-y: hidden;
 
         display: flex;
         flex-direction: column;
@@ -191,6 +191,7 @@ p
     width: 100%;
     height: 100%;
     transform: scale(0.5);
+    width: 0;
     object-fit: contain;
    }
 #card1
@@ -224,11 +225,12 @@ p
    {
     z-index: -1;
     position: absolute;
-    top: -220px;
-    left: -162px;
-    height: auto;
-    width: auto;
+    top: -100px;
+    left: 0;
+    height: 100%;
+    width: 100%;
     transform: scale(0.4);
+    transform: scaleX(0);
    }
 
 #card2:hover

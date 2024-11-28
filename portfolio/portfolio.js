@@ -26,7 +26,7 @@ function card1()
     }
 function card2()
     {
-      alert("works2")
+      alert ("help")
     }
 function card3()
     {
