@@ -1,0 +1,100 @@
+body    {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;/*not quite sure how this works so gotta look it up later*/
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 0.1px;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(rgb(60, 184, 255), rgb(3, 28, 172));
+    background-image: url("https://i.ibb.co/1T58Hp2/Persona-menu-2.png");
+    background-size: 100% 100%;
+}
+
+.clock .zero /*the number color*/
+{
+    color: white;
+}
+
+h1  {
+    color: black;
+    transform: skew(-8deg, -6deg);
+}
+
+
+.triangle{
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 60px solid transparent;
+
+    border-bottom: 50px solid white;
+    position: relative;
+    Left: 30px;
+    bottom: 230px;
+    transform: rotate(-10deg);
+}
+
+
+.clock{
+    position: relative;
+    bottom: 30px;
+}
+
+.hour  {
+    color: rgb(105, 252, 249);
+    transform: skew(-5deg, -20deg);
+    font-size: 30px;
+}
+.min  {
+    color: rgb(36, 181, 255);
+    transform: skew(-10deg, -13deg);
+    font-size: 22px;
+}
+.sec  {
+    color: rgb(95, 206, 255);
+    transform: skew(-18deg, -5deg);
+}
+.clock .ampm  {
+    color: rgb(105, 252, 249);
+    transform: skew(-10deg, -10deg);
+}
+
+
+/*
+.clock span{
+    display: flex;
+    width: 100px;
+    height: 80px;
+    border-style: transparent;
+    justify-content: center;
+    align-items: center;
+    font-size: 50;
+    background-color: slateblue;
+    opacity: 0.8;
+}
+
+.clock .text{
+    font-size: 10px;
+    height: 30px;
+    letter-spacing: 2px;
+    background-color: darkblue;
+}
+
+.clock div{
+    margin: 5px;
+}
+
+.clock #ampm{
+    background-color: green;
+    height: 30px;
+    width: 60px;
+    font-size: 20px;
+}
+    */
