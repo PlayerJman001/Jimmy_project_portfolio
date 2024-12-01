@@ -184,16 +184,6 @@ p
         background-color: white;
         transition: ease 0.2s;
    }
-
-#adobe_i
-   {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: scale(0.5);
-    width: 0;
-    object-fit: contain;
-   }
 #card1
    {
         /*originally I had z index on the negativs, but uh htat broke really fast lmao. Note to self, never use negative z index again*/
@@ -208,7 +198,6 @@ p
 #card1:hover
    {
     z-index: 5;
-    background-color: black;
     transform: rotate(0deg);
     top: 300px;
    }
@@ -223,20 +212,18 @@ p
    
 #adobe_i
    {
-    z-index: -1;
+    transition: ease 0.2s;
     position: absolute;
-    top: -100px;
-    left: 0;
+    top: -90px;
+    left: -63px;
     height: 100%;
     width: 100%;
     transform: scale(0.4);
-    transform: scaleX(0);
    }
 
 #card2:hover
     {
         z-index: 5;
-        background-color: black;
         transform: rotate(0deg);
         top: -50px;
     }
@@ -251,7 +238,6 @@ p
 #card3:hover
     {
         z-index: 5;
-        background-color: black;
         top: -400px;
     }
 #card4
@@ -265,7 +251,24 @@ p
 #card4:hover
     {
         z-index: 5;
-        background-color: black;
         transform: rotate(0deg);
         top: -750px;
+    }
+
+.clock
+    {
+        position: absolute;
+
+        object-fit: contain;
+        top: 0;
+        height: 350px;
+        width: 290px;
+        border-radius: 18px;
+    }
+.someonehelpme
+    {
+        position: absolute;
+        height: 350px;
+        width: 290px;
+        top: 0;
     }

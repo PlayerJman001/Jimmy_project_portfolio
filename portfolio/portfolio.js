@@ -22,18 +22,5 @@ function contactOpen()
 
 function card1()
     {
-      alert("Works")
-    }
-function card2()
-    {
-      alert ("help")
-      document.getElementById("adobe_i").style.width = "100px";
-    }
-function card3()
-    {
-      alert ("works3")
-    }
-function card4()
-    {
-      alert ("works4")
+      window.open("../Digital-Clock/index.html")
     }
