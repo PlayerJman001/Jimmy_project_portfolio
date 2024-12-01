@@ -19,13 +19,3 @@ function contactOpen()
     {
       window.location.href = "../contacts/contacts.html";
     }
-
-function card1()
-    {
-      window.open("../Digital-Clock/index.html")
-    }
-
-function card2()
-    {
-      window.open("../Adobe-Illustrator/adobeI.html")
-    }
