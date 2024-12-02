@@ -15,6 +15,8 @@ body
         object-fit: cover;
         background-position: 50% 50%;
         background-attachment: fixed;
+
+        transition: ease 0.2s;
     }
 
 
@@ -42,38 +44,62 @@ h
         transform: skew(0deg, -2deg);
     }
 
-.textbg 
+.desktop
     {
-        z-index: 1;
-        border-bottom: 110px solid white;
-        border-left: 25px solid transparent;
-        border-right: 30px solid transparent;
-        height: 0;
-        width: 650px;
-        position: fixed;
-        top: 15px;
-        left: 170px;
+        display: none;
+    }
 
+.mobile
+    {
+        display: block;
+    }
+
+.textbg1
+    {
+        z-index: -1;
+        border-bottom: 1.2em solid white; /*controls the height*/
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        height: 0;
+        width: 5.5em;
+        position: absolute;
+        top: 5px;
+        left: -15px;
+        transform: skew(0deg, -2deg);
+    }
+
+.textbg2
+    {
+        z-index: -1;
+        border-bottom: 1.2em solid white; /*controls the height*/
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        height: 0;
+        width: 1.8em;
+        position: absolute;
+        top: 5px;
+        left: -15px;
         transform: skew(0deg, -2deg);
     }
 
 .icon
     {
-        z-index: 4;
-        position: fixed;
-        top: 20px;
-        right: 50px;
+        position: absolute;
+        display: hidden;
+        scale: 0;
     }
 
 p
     {
-        font-size: 30px;
+        transition: ease 0.2s;
+        
+        font-size: 20px;
         background-color: white;
         border: 2px solid black;
         padding: 20px;
         transform: skew(0deg,-7deg);
         position: relative;
-        left: -250px;
+        left: 0px;
         top: 50px;
     }
 
@@ -149,6 +175,7 @@ p
 .btn:hover
    {
         transform: rotate(2deg) scale(1.1);
+        cursor: pointer;
    }
 
 #home
@@ -164,4 +191,46 @@ p
 #contact
    {
     transform: skew(0deg, 7deg);
+   }
+
+
+
+@media (min-width: 876px) 
+   {
+        body
+            {
+                transition: ease 0.2s;
+
+                overflow: hidden;
+            }
+
+       .mobile
+           {
+               display: none;
+           } 
+       .desktop
+           {
+               display: block;
+           } 
+
+        p
+            {
+                font-size: 30px;
+                background-color: white;
+                border: 2px solid black;
+                padding: 20px;
+                transform: skew(0deg,-7deg);
+                position: relative;
+                left: -250px;
+                top: 50px;
+            }
+            .icon
+                {
+                    display: block;
+                    z-index: 4;
+                    position: fixed;
+                    top: 20px;
+                    right: 50px;
+                    scale: 1;
+                }
    }
