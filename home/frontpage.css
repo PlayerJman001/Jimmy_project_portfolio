@@ -16,7 +16,7 @@ body
         background-position: 50% 50%;
         background-attachment: fixed;
 
-        transition: ease 0.2s;
+        transition: ease 0.1s;
     }
 
 
@@ -54,7 +54,7 @@ h
         display: block;
     }
 
-.textbg1
+.textbg
     {
         z-index: -1;
         border-bottom: 1.2em solid white; /*controls the height*/
@@ -68,10 +68,10 @@ h
         transform: skew(0deg, -2deg);
     }
 
-.textbg2
+/*.textbg
     {
         z-index: -1;
-        border-bottom: 1.2em solid white; /*controls the height*/
+        border-bottom: 1.2em solid white;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         height: 0;
@@ -80,7 +80,7 @@ h
         top: 5px;
         left: -15px;
         transform: skew(0deg, -2deg);
-    }
+    }*/
 
 .icon
     {
@@ -199,7 +199,7 @@ p
    {
         body
             {
-                transition: ease 0.2s;
+                transition: ease 0.1s;
 
                 overflow: hidden;
             }

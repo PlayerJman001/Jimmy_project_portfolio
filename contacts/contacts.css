@@ -5,6 +5,8 @@
 
 body 
     {
+        transition: ease 0.1s;
+
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -42,6 +44,15 @@ h
         transform: skew(0deg, -2deg);
     }
 
+.desktop
+    {
+        display: none;
+    }
+.mobile
+    {
+        display: block;
+    }
+
 .textbg 
     {
         z-index: 1;
@@ -49,7 +60,7 @@ h
         border-left: 25px solid transparent;
         border-right: 30px solid transparent;
         height: 0;
-        width: 480px;
+        width: 300px;
         position: fixed;
         top: 15px;
         left: 170px;
@@ -63,6 +74,7 @@ h
         position: fixed;
         top: 20px;
         right: 50px;
+        scale: 0;
     }
 
     /* The side navigation menu */
@@ -88,6 +100,7 @@ p
         top: 200px;
         left: -300px;
         rotate: 13deg;
+        display: none;
     }
 
     .sidenav 
@@ -150,18 +163,19 @@ p
     }
 
 .btn
-   {
-    z-index: 1;
-    position: fixed;
-    transition: ease .2s;
-    top: 35px;
-    left: 40px;
-   }
-
+    {
+     z-index: 1;
+     position: fixed;
+     transition: ease .2s;
+     top: 35px;
+     left: 40px;
+    }
+ 
 .btn:hover
-   {
-        transform: rotate(2deg) scale(1.1);
-   }
+    {
+         transform: rotate(2deg) scale(1.1);
+         cursor: pointer;
+    }
 
 #home
    {
@@ -177,3 +191,54 @@ p
    {
     transform: skew(0deg, 7deg);
    }
+
+@media (min-width: 876px) 
+    {
+        body
+            {
+                transition: ease 0.1s;
+            }
+
+        .mobile
+                {
+                    display: none;
+                }
+        .desktop
+                {
+                    display: block;
+                }
+
+        .icon
+                {
+                    scale: 1;
+                }
+        .textbg 
+                {
+                    z-index: 1;
+                    border-bottom: 110px solid white;
+                    border-left: 25px solid transparent;
+                    border-right: 30px solid transparent;
+                    height: 0;
+                    width: 480px;
+                    position: fixed;
+                    top: 15px;
+                    left: 170px;
+            
+                    transform: skew(0deg, -2deg);
+                }
+
+        .photobg
+                {
+                    display: block;
+                    background-color: white;
+                    border: 2px solid black;;
+                    padding-top: 450px;
+                    padding-left: 350px;
+                    position: relative;
+                    top: 200px;
+                    left: -300px;
+                    rotate: 13deg;
+                }
+
+
+    }
