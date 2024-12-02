@@ -190,7 +190,7 @@ p
         z-index: 0;
         position: relative;
         left: -400px;
-        top: 500px;
+        bottom: -500px;
         transform: rotate(-30deg);
    }
 
@@ -199,14 +199,14 @@ p
    {
     z-index: 5;
     transform: rotate(0deg);
-    top: 300px;
+    bottom: -300px;
    }
 #card2
    {
         z-index: 1;
         position: relative;
         left: -180px;
-        top: 80px;
+        bottom: -80px;
         transform: rotate(-10deg);
    }
    
@@ -225,7 +225,7 @@ p
     {
         z-index: 5;
         transform: rotate(0deg);
-        top: -50px;
+        bottom: 50px;
     }
 #card3
     {
@@ -254,7 +254,34 @@ p
         transform: rotate(0deg);
         top: -750px;
     }
-
+#card5
+    {
+        z-index: 3;
+        position: relative;
+        left: 350px;
+        top: -600px;
+        transform: rotate(10deg);
+    }
+#card5:hover
+    {
+        z-index: 5;
+        transform: rotate(0deg);
+        top: -750px;
+    }
+#card6
+    {
+        z-index: 3;
+        position: relative;
+        left: 350px;
+        top: -600px;
+        transform: rotate(10deg);
+    }
+#card6:hover
+    {
+        z-index: 5;
+        transform: rotate(0deg);
+        top: -750px;
+    }
 .clock
     {
         position: absolute;
