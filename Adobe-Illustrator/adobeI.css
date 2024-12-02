@@ -37,7 +37,7 @@ h
         font-size: 110px;
         position: fixed;
         top: 0;
-        left: 550px;
+        left: 450px;
         
         transform: skew(0deg, -2deg);
     }
@@ -52,7 +52,7 @@ h
         width: 650px;
         position: fixed;
         top: 15px;
-        left: 500px;
+        left: 400px;
 
         transform: skew(0deg, -2deg);
     }
