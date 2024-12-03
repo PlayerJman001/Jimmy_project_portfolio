@@ -334,7 +334,9 @@ p
         
         .card  
         {
-                display: block;
+                display:inline;
+
+
                 padding-top: 350px;
                 width: 290px;
                 border: 2px solid black;
