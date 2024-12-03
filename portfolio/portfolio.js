@@ -29,3 +29,17 @@ function card2()
     {
       window.location.href = "../Adobe-Illustrator/adobeI.html"
     }
+
+function card3()
+    {
+      window.location.href = "../Rotating-Image-Gallery/index.html"
+    }
+
+function card4()
+    {
+      window.location.href = "../WAFFLE_SHOP/index.html"
+    }
+function card5()
+    {
+      alert("sup")
+    }

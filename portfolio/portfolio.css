@@ -166,21 +166,11 @@ p
    {
     transform: skew(0deg, 7deg);
    }
-   
-.piston
-    {
-        /*bro what the fuck, why does this work LMFAO*/
-        /*this element has the sole purpose of pushing the cards down... well as long as it works I suppose*/
-        padding: 5px;
-        background-color: black;
-        position: relative;
-        top: 500px;
 
-        display: none;
-    }
 .card  
    {
-        display: none;
+        display: flex;
+        flex-direction: column;
 
         padding-top: 350px;
         width: 290px;
@@ -296,6 +286,33 @@ p
         height: 350px;
         width: 290px;
         border-radius: 18px;
+    }
+.RIG
+    {
+        position: absolute;
+
+        object-fit: contain;
+        top: 0;
+        height: 350px;
+        width: 290px;
+        border-radius: 18px;
+    }
+.waffle
+    {
+        position: absolute;
+
+        object-fit: contain;
+        top: 0;
+        height: 350px;
+        width: 290px;
+        border-radius: 18px;
+    }
+
+.iconimg
+    {
+        position: absolute;
+        left: 25%;
+        top: 30%;
     }
 .someonehelpme
     {
@@ -436,18 +453,5 @@ p
                 height: 350px;
                 width: 290px;
                 border-radius: 18px;
-            }
-
-            .piston
-            {
-                /*bro what the fuck, why does this work LMFAO*/
-                /*this element has the sole purpose of pushing the cards down... well as long as it works I suppose*/
-                padding: 5px;
-                background-color: black;
-                position: relative;
-                top: 500px;
-
-                display: block;
-            }
-
+            }   
     }
