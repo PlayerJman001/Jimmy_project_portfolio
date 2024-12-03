@@ -22,10 +22,10 @@ function contactOpen()
 
 function card1()
     {
-      window.open("../Digital-Clock/index.html")
+      window.location.href = "../Digital-Clock/index.html"
     }
 
 function card2()
     {
-      window.open("../Adobe-Illustrator/adobeI.html")
+      window.location.href = "../Adobe-Illustrator/adobeI.html"
     }

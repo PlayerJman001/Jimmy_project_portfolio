@@ -5,7 +5,7 @@
 
 body 
     {
-        overflow-y: hidden;
+        overflow-y: scroll;
 
         display: flex;
         flex-direction: column;
@@ -175,9 +175,13 @@ p
         background-color: black;
         position: relative;
         top: 500px;
+
+        display: none;
     }
 .card  
    {
+        display: none;
+
         padding-top: 350px;
         width: 290px;
         border: 2px solid black;
@@ -299,4 +303,151 @@ p
         height: 350px;
         width: 290px;
         top: 0;
+    }
+
+@media (min-width: 876px) 
+    {
+
+        body
+        {
+            overflow-y: hidden;
+        }
+
+
+        
+        .card  
+        {
+                display: block;
+                padding-top: 350px;
+                width: 290px;
+                border: 2px solid black;
+                border-radius: 20px;
+                background-color: white;
+                transition: ease 0.2s;
+        }
+        #card1
+        {
+                /*originally I had z index on the negativs, but uh htat broke really fast lmao. Note to self, never use negative z index again*/
+                z-index: 0;
+                position: absolute;
+                left: 120px;
+                bottom: -80px;
+                transform: rotate(-14deg);
+        }
+
+
+        #card1:hover
+        {
+            z-index: 6;
+            transform: rotate(0deg);
+            bottom: 60px;
+        }
+        #card2
+        {
+                z-index: 1;
+                position: absolute;
+                left: 300px;
+                bottom: -50px;
+                transform: rotate(-5deg);
+        }
+        
+        #adobe_i
+        {
+            position: absolute;
+            top: -90px;
+            left: -65px;
+            transform: scale(0.4);
+        }
+
+        .image
+            {
+                border-radius: 500px;
+            }
+
+        #card2:hover
+            {
+                z-index: 6;
+                transform: rotate(0deg);
+                bottom: 60px;
+            }
+        #card3
+            {
+                z-index: 2;
+                position: absolute;
+                left: 400px;
+                top: 420px;
+                transform: rotate(-2deg);
+            }
+
+        #card3:hover
+            {
+                z-index: 6;
+                top: 350px;
+                transform: rotate(0deg);
+            }
+        #card4
+            {
+                z-index: 3;
+                position: absolute;
+                left: 600px;
+                top: 420px;
+                transform: rotate(5deg)
+            }
+        #card4:hover
+            {
+                z-index: 6;
+                transform: rotate(0deg);
+                top: 350px;
+            }
+        #card5
+            {
+                z-index: 4;
+                position: absolute;
+                left: 800px;
+                top: 450px;
+                transform: rotate(10deg);
+            }
+        #card5:hover
+            {
+                z-index: 6;
+                transform: rotate(0deg);
+                top: 350px;
+            }
+        #card6
+            {
+                z-index: 5;
+                position: absolute;
+                left: 1000px;
+                top: 500px;
+                transform: rotate(20deg);
+            }
+        #card6:hover
+            {
+                z-index: 6;
+                transform: rotate(0deg);
+                top: 350px;
+            }
+        .clock
+            {
+                position: absolute;
+
+                object-fit: contain;
+                top: 0;
+                height: 350px;
+                width: 290px;
+                border-radius: 18px;
+            }
+
+            .piston
+            {
+                /*bro what the fuck, why does this work LMFAO*/
+                /*this element has the sole purpose of pushing the cards down... well as long as it works I suppose*/
+                padding: 5px;
+                background-color: black;
+                position: relative;
+                top: 500px;
+
+                display: block;
+            }
+
     }
