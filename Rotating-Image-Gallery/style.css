@@ -1,0 +1,77 @@
+body
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        height: 100vh;
+        justify-content: center;
+        background-image: url("https://i.ibb.co/1T58Hp2/Persona-menu-2.png");
+        background-size: 100% 100%;
+    }
+
+h1
+    {
+        color: white;
+        position: relative;
+        top: -70px;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+.image-container
+    {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(0deg);
+        transition: transform 0.7s;
+        position: relative;
+    }
+
+.image-container span
+    {  
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+        top: 0;
+        left: -7vh;
+        width: 150%;
+        position: absolute;
+    }
+
+.image-container span img
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+.btn
+    {
+        position: absolute;
+        bottom: 130px;
+        background-color: #3592EB;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: medium;
+      }
+      
+.btn:hover
+    {
+        filter: brightness(1.5);
+        color: #FF83F1;
+    }
+      
+#left
+    {
+        left: 34%;
+    }
+      
+#right
+    {
+        right: 34%;
+    }
