@@ -6,7 +6,7 @@
 body 
     {
         overflow-y: scroll;
-
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -19,7 +19,7 @@ body
 
 
 
-    .square
+.square
     {
         height: 150px;
         width: 120%; 
@@ -27,54 +27,67 @@ body
         position: fixed;
         top: 0vh;
         left: 0vh;
-        z-index: 0;
+        z-index: 7;
     }
 
 h 
     {
-        z-index: 2;
+        z-index: 9;
         font-family: expose; 
         font-size: 110px;
         position: fixed;
         top: 0;
-        left: 220px;
+        left: 200px;
         
         transform: skew(0deg, -2deg);
     }
 
-.textbg 
-    {
-        z-index: 1;
-        border-bottom: 110px solid white;
-        border-left: 25px solid transparent;
-        border-right: 30px solid transparent;
-        height: 0;
-        width: 500px;
-        position: fixed;
-        top: 15px;
-        left: 170px;
-
-        transform: skew(0deg, -2deg);
-    }
-
-.icon
-    {
-        z-index: 4;
-        position: fixed;
-        top: 20px;
-        right: 50px;
-    }
-
 p
     {
-        font-size: 30px;
+        transition: ease 0.2s;
+        
+        font-size: 20px;
         background-color: white;
         border: 2px solid black;
         padding: 20px;
         transform: skew(0deg,-7deg);
         position: relative;
-        left: -250px;
+        left: 0px;
         top: 50px;
+    }
+
+.desktop
+    {
+        display: none;
+    }
+
+.mobile
+    {
+        display: block;
+    }
+
+
+.textbg
+    {
+        position: fixed;
+        top: 15px;
+        left: 170px;
+
+        z-index: 8;
+        border-bottom: 110px solid white; /*controls the height*/
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        height: 0;
+        width: 270px;
+        transform: skew(0deg, -2deg);
+    }
+
+
+.icon
+    {
+        position: absolute;
+        display: hidden;
+        scale: 0;
     }
 
 .sidenav 
@@ -82,7 +95,7 @@ p
       height: 40%;
       width: 0; /*This is gonna be changed in js to expand*/
       position: fixed;
-      z-index: 2;
+      z-index: 10;
       top: 0;
       left: 0;
       background-color: black;
@@ -139,7 +152,7 @@ p
 
 .btn
    {
-    z-index: 1;
+    z-index: 9;
     position: fixed;
     transition: ease .2s;
     top: 35px;
@@ -183,10 +196,10 @@ p
    {
         /*originally I had z index on the negativs, but uh htat broke really fast lmao. Note to self, never use negative z index again*/
         z-index: 0;
-        position: relative;
-        left: -400px;
-        bottom: -500px;
-        transform: rotate(-30deg);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: rotate(-10deg);
    }
 
 
@@ -194,15 +207,15 @@ p
    {
     z-index: 5;
     transform: rotate(0deg);
-    bottom: -300px;
+    bottom: 125px;
    }
 #card2
    {
         z-index: 1;
-        position: relative;
-        left: -180px;
-        bottom: -80px;
-        transform: rotate(-10deg);
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        transform: rotate(10deg);
    }
    
 #adobe_i
@@ -220,62 +233,64 @@ p
     {
         z-index: 5;
         transform: rotate(0deg);
-        bottom: 50px;
+        bottom: 125px;
     }
 #card3
     {
         z-index: 2;
-        position: relative;
-        left: 80px;
-        top: -280px;
+        position: absolute;
+        left: 0;
+        top: 700px;
+        transform: rotate(-10deg);
     }
 
 #card3:hover
     {
         z-index: 5;
-        top: -400px;
+        top: 550px;
+        transform: rotate(0deg);
     }
 #card4
     {
         z-index: 3;
-        position: relative;
-        left: 350px;
-        top: -600px;
+        position: absolute;
+        right: 0;
+        top: 700px;
         transform: rotate(10deg);
     }
 #card4:hover
     {
         z-index: 5;
         transform: rotate(0deg);
-        top: -750px;
+        top: 550px;
     }
 #card5
     {
         z-index: 3;
-        position: relative;
-        left: 350px;
-        top: -600px;
-        transform: rotate(10deg);
+        position: absolute;
+        left: 0;
+        top: 1000px;
+        transform: rotate(-10deg);
     }
 #card5:hover
     {
         z-index: 5;
         transform: rotate(0deg);
-        top: -750px;
+        top: 875px;
     }
 #card6
     {
         z-index: 3;
-        position: relative;
-        left: 350px;
-        top: -600px;
+        position: absolute;
+        right: 0;
+        top: 1000px;
         transform: rotate(10deg);
     }
 #card6:hover
     {
         z-index: 5;
         transform: rotate(0deg);
-        top: -750px;
+        top: 875px;
     }
 .clock
     {
@@ -325,135 +340,180 @@ p
 @media (min-width: 876px) 
     {
 
-        body
-        {
-            overflow-y: hidden;
-        }
+        .mobile
+            {
+                display: none;
+            } 
+        .desktop
+            {
+                display: block;
+            } 
+
+            p
+                {
+                    font-size: 30px;
+                    background-color: white;
+                    border: 2px solid black;
+                    padding: 20px;
+                    transform: skew(0deg,-7deg);
+                    position: relative;
+                    left: -250px;
+                    top: 50px;
+                }
+            .icon
+                {
+                    display: block;
+                    z-index: 4;
+                    position: fixed;
+                    top: 20px;
+                    right: 50px;
+                    scale: 1;
+                }
+                .textbg
+                {
+                    border-bottom: 110px solid white;
+                    border-left: 25px solid transparent;
+                    border-right: 30px solid transparent;
+                    height: 0;
+                    width: 480px;
+                    position: fixed;
+                    top: 15px;
+                    left: 170px;
+            
+                    transform: skew(0deg, -2deg);
+                }
 
 
-        
-        .card  
-        {
-                display:inline;
+                
+                .card  
+                {
+                        display:inline;
 
 
-                padding-top: 350px;
-                width: 290px;
-                border: 2px solid black;
-                border-radius: 20px;
-                background-color: white;
-                transition: ease 0.2s;
-        }
-        #card1
-        {
-                /*originally I had z index on the negativs, but uh htat broke really fast lmao. Note to self, never use negative z index again*/
-                z-index: 0;
-                position: absolute;
-                left: 120px;
-                bottom: -80px;
-                transform: rotate(-14deg);
-        }
+                        padding-top: 350px;
+                        width: 290px;
+                        border: 2px solid black;
+                        border-radius: 20px;
+                        background-color: white;
+                        transition: ease 0.2s;
+                }
+                #card1
+                {
+                        /*originally I had z index on the negativs, but uh htat broke really fast lmao. Note to self, never use negative z index again*/
+                        z-index: 0;
+                        position: absolute;
+                        left: 120px;
+                        bottom: -80px;
+                        transform: rotate(-14deg);
+                }
 
 
-        #card1:hover
-        {
-            z-index: 6;
-            transform: rotate(0deg);
-            bottom: 60px;
-        }
-        #card2
-        {
-                z-index: 1;
-                position: absolute;
-                left: 300px;
-                bottom: -50px;
-                transform: rotate(-5deg);
-        }
-        
-        #adobe_i
-        {
-            position: absolute;
-            top: -90px;
-            left: -65px;
-            transform: scale(0.4);
-        }
+                #card1:hover
+                {
+                    z-index: 6;
+                    transform: rotate(0deg);
+                    bottom: 60px;
+                }
+                #card2
+                {
+                        z-index: 1;
+                        position: absolute;
+                        left: 300px;
+                        bottom: -50px;
+                        transform: rotate(-5deg);
+                }
+                
+                #adobe_i
+                {
+                    position: absolute;
+                    top: -90px;
+                    left: -65px;
+                    transform: scale(0.4);
+                }
 
-        .image
-            {
-                border-radius: 500px;
-            }
+                .image
+                    {
+                        border-radius: 500px;
+                    }
 
-        #card2:hover
-            {
-                z-index: 6;
-                transform: rotate(0deg);
-                bottom: 60px;
-            }
-        #card3
-            {
-                z-index: 2;
-                position: absolute;
-                left: 400px;
-                top: 420px;
-                transform: rotate(-2deg);
-            }
+                #card2:hover
+                    {
+                        z-index: 6;
+                        transform: rotate(0deg);
+                        bottom: 60px;
+                    }
+                #card3
+                    {
+                        z-index: 2;
+                        position: absolute;
+                        left: 400px;
+                        top: 420px;
+                        transform: rotate(-2deg);
+                    }
 
-        #card3:hover
-            {
-                z-index: 6;
-                top: 350px;
-                transform: rotate(0deg);
-            }
-        #card4
-            {
-                z-index: 3;
-                position: absolute;
-                left: 600px;
-                top: 420px;
-                transform: rotate(5deg)
-            }
-        #card4:hover
-            {
-                z-index: 6;
-                transform: rotate(0deg);
-                top: 350px;
-            }
-        #card5
-            {
-                z-index: 4;
-                position: absolute;
-                left: 800px;
-                top: 450px;
-                transform: rotate(10deg);
-            }
-        #card5:hover
-            {
-                z-index: 6;
-                transform: rotate(0deg);
-                top: 350px;
-            }
-        #card6
-            {
-                z-index: 5;
-                position: absolute;
-                left: 1000px;
-                top: 500px;
-                transform: rotate(20deg);
-            }
-        #card6:hover
-            {
-                z-index: 6;
-                transform: rotate(0deg);
-                top: 350px;
-            }
-        .clock
-            {
-                position: absolute;
+                #card3:hover
+                    {
+                        z-index: 6;
+                        top: 350px;
+                        transform: rotate(0deg);
+                    }
+                #card4
+                    {
+                        z-index: 3;
+                        position: absolute;
+                        left: 600px;
+                        top: 420px;
+                        transform: rotate(5deg)
+                    }
+                #card4:hover
+                    {
+                        z-index: 6;
+                        transform: rotate(0deg);
+                        top: 350px;
+                    }
+                #card5
+                    {
+                        z-index: 4;
+                        position: absolute;
+                        left: 800px;
+                        top: 450px;
+                        transform: rotate(10deg);
+                    }
+                #card5:hover
+                    {
+                        z-index: 6;
+                        transform: rotate(0deg);
+                        top: 350px;
+                    }
+                #card6
+                    {
+                        z-index: 5;
+                        position: absolute;
+                        left: 1000px;
+                        top: 500px;
+                        transform: rotate(20deg);
+                    }
+                #card6:hover
+                    {
+                        z-index: 6;
+                        transform: rotate(0deg);
+                        top: 350px;
+                    }
+                .clock
+                    {
+                        position: absolute;
 
-                object-fit: contain;
-                top: 0;
-                height: 350px;
-                width: 290px;
-                border-radius: 18px;
-            }   
+                        object-fit: contain;
+                        top: 0;
+                        height: 350px;
+                        width: 290px;
+                        border-radius: 18px;
+                    }   
+
+                body
+                    {
+                        transition: ease 0.1s;
+
+                        overflow: hidden;
+                    }
     }

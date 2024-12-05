@@ -77,17 +77,17 @@ h
         scale: 0;
     }
 
-    /* The side navigation menu */
 p
     {
+        transition: ease 0.1s;
         font-size: 30px;
         background-color: white;
         border: 2px solid black;
         padding: 20px;
-        transform: skew(0deg,-7deg);
+        transform: skew(0deg,3deg);
+        align-items: center;
         position: relative;
-        left: 200px;
-        top: -150px;
+        top: 50px;
     }
 
 .photobg
@@ -238,6 +238,25 @@ p
                     top: 200px;
                     left: -300px;
                     rotate: 13deg;
+                }
+
+        p
+                {
+                    font-size: 30px;
+                    background-color: white;
+                    border: 2px solid black;
+                    padding: 20px;
+                    transform: skew(0deg,-7deg);
+                    position: relative;
+                    left: 200px;
+                    top: -150px;
+                }
+
+        .joke
+                {
+                    position: absolute;
+                    left: 80px;
+                    top: 100px;
                 }
 
 

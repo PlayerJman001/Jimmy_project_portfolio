@@ -20,6 +20,17 @@ function contactOpen()
       window.location.href = "../contacts/contacts.html";
     }
 
+function resiezeFn()
+    {
+      var width = window.innerWidth
+      if (width >= 876)  
+        {
+          scrollTo(0,0)
+        }
+    }
+  onresize = resiezeFn;
+  resiezeFn()
+
 function card1()
     {
       window.location.href = "../Digital-Clock/index.html"
@@ -27,7 +38,7 @@ function card1()
 
 function card2()
     {
-      window.location.href = "../Adobe-Illustrator/adobeI.html"
+      alert("I might have challenged myself a tad bit too much and now my head hurts, so this is the best you're getting")
     }
 
 function card3()
@@ -41,5 +52,5 @@ function card4()
     }
 function card5()
     {
-      alert("sup")
+      alert("I might have challenged myself a tad bit too much and now my head hurts, so this is the best you're getting")
     }
