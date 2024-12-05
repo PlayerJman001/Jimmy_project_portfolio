@@ -185,6 +185,8 @@ p
         display: flex;
         flex-direction: column;
 
+        position: absolute;
+
         padding-top: 350px;
         width: 290px;
         border: 2px solid black;
@@ -196,7 +198,6 @@ p
    {
         /*originally I had z index on the negativs, but uh htat broke really fast lmao. Note to self, never use negative z index again*/
         z-index: 0;
-        position: absolute;
         left: 0;
         bottom: 0;
         transform: rotate(-10deg);
@@ -212,7 +213,6 @@ p
 #card2
    {
         z-index: 1;
-        position: absolute;
         right: 0px;
         bottom: 0px;
         transform: rotate(10deg);
@@ -220,8 +220,8 @@ p
    
 #adobe_i
    {
-    transition: ease 0.2s;
     position: absolute;
+    transition: ease 0.2s;
     top: -90px;
     left: -63px;
     height: 100%;
@@ -238,59 +238,55 @@ p
 #card3
     {
         z-index: 2;
-        position: absolute;
         left: 0;
-        top: 700px;
+        bottom: -300px;
         transform: rotate(-10deg);
     }
 
 #card3:hover
     {
         z-index: 5;
-        top: 550px;
+        bottom: -150px;
         transform: rotate(0deg);
     }
 #card4
     {
         z-index: 3;
-        position: absolute;
         right: 0;
-        top: 700px;
+        bottom: -300px;
         transform: rotate(10deg);
     }
 #card4:hover
     {
         z-index: 5;
         transform: rotate(0deg);
-        top: 550px;
+        bottom: -150px;
     }
 #card5
     {
         z-index: 3;
-        position: absolute;
         left: 0;
-        top: 1000px;
+        bottom: -600px;
         transform: rotate(-10deg);
     }
 #card5:hover
     {
         z-index: 5;
         transform: rotate(0deg);
-        top: 875px;
+        bottom: -500px;
     }
 #card6
     {
         z-index: 3;
-        position: absolute;
         right: 0;
-        top: 1000px;
+        bottom: -600px;
         transform: rotate(10deg);
     }
 #card6:hover
     {
         z-index: 5;
         transform: rotate(0deg);
-        top: 875px;
+        bottom: -500px;
     }
 .clock
     {
@@ -337,6 +333,11 @@ p
         top: 0;
     }
 
+.image
+    {
+        border-radius: 500px;
+    }
+
 @media (min-width: 876px) 
     {
 
@@ -362,12 +363,20 @@ p
                 }
             .icon
                 {
+                    transition: ease 0.2s;
+
                     display: block;
-                    z-index: 4;
+                    z-index: 9;
                     position: fixed;
                     top: 20px;
                     right: 50px;
                     scale: 1;
+                }
+            .icon:hover
+                {
+                    transition: ease 0.2s;
+                    scale: 1.1;
+                    transform: rotate(5deg);
                 }
                 .textbg
                 {
@@ -396,12 +405,13 @@ p
                         border-radius: 20px;
                         background-color: white;
                         transition: ease 0.2s;
+
+                        position: absolute;
                 }
                 #card1
                 {
                         /*originally I had z index on the negativs, but uh htat broke really fast lmao. Note to self, never use negative z index again*/
                         z-index: 0;
-                        position: absolute;
                         left: 120px;
                         bottom: -80px;
                         transform: rotate(-14deg);
@@ -410,14 +420,13 @@ p
 
                 #card1:hover
                 {
-                    z-index: 6;
-                    transform: rotate(0deg);
-                    bottom: 60px;
+                        z-index: 6;
+                        transform: rotate(0deg);
+                        bottom: 60px;
                 }
                 #card2
                 {
                         z-index: 1;
-                        position: absolute;
                         left: 300px;
                         bottom: -50px;
                         transform: rotate(-5deg);
@@ -431,10 +440,6 @@ p
                     transform: scale(0.4);
                 }
 
-                .image
-                    {
-                        border-radius: 500px;
-                    }
 
                 #card2:hover
                     {
@@ -445,59 +450,55 @@ p
                 #card3
                     {
                         z-index: 2;
-                        position: absolute;
                         left: 400px;
-                        top: 420px;
+                        bottom: -45px;
                         transform: rotate(-2deg);
                     }
 
                 #card3:hover
                     {
                         z-index: 6;
-                        top: 350px;
+                        bottom: 60px;
                         transform: rotate(0deg);
                     }
                 #card4
                     {
                         z-index: 3;
-                        position: absolute;
                         left: 600px;
-                        top: 420px;
+                        bottom: -40px;
                         transform: rotate(5deg)
                     }
                 #card4:hover
                     {
                         z-index: 6;
                         transform: rotate(0deg);
-                        top: 350px;
+                        bottom: 60px;
                     }
                 #card5
                     {
                         z-index: 4;
-                        position: absolute;
                         left: 800px;
-                        top: 450px;
+                        bottom: -50px;
                         transform: rotate(10deg);
                     }
                 #card5:hover
                     {
                         z-index: 6;
                         transform: rotate(0deg);
-                        top: 350px;
+                        bottom: 60px;
                     }
                 #card6
                     {
                         z-index: 5;
-                        position: absolute;
                         left: 1000px;
-                        top: 500px;
+                        bottom: -100px;
                         transform: rotate(20deg);
                     }
                 #card6:hover
                     {
                         z-index: 6;
                         transform: rotate(0deg);
-                        top: 350px;
+                        bottom: 60px;
                     }
                 .clock
                     {

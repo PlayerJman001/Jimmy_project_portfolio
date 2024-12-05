@@ -208,9 +208,22 @@ p
                     display: block;
                 }
 
-        .icon
+            .icon
                 {
+                    transition: ease 0.2s;
+
+                    display: block;
+                    z-index: 9;
+                    position: fixed;
+                    top: 20px;
+                    right: 50px;
                     scale: 1;
+                }
+            .icon:hover
+                {
+                    transition: ease 0.2s;
+                    scale: 1.1;
+                    transform: rotate(5deg);
                 }
         .textbg 
                 {
