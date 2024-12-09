@@ -221,6 +221,9 @@ p
                     top: 20px;
                     right: 50px;
                     scale: 1;
+
+
+                    cursor: pointer;
                 }
             .icon:hover
                 {
